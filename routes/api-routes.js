@@ -22,8 +22,10 @@ module.exports = function (app) {
     // Display all items
     app.get("", function (req, res) { });
 
-    //Display individually
+    //Display individual items
     //
+
+
     // ================================================================================
     //POST route 
     // ================================================================================
