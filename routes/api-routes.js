@@ -6,7 +6,7 @@
 // ================================================================================
 
 // Require models
-var db = require("./models");
+var db = require("../models");
 
 // ================================================================================
 // ROUTES
@@ -20,10 +20,18 @@ module.exports = function(app) {
   // Ex.: If users want to only see popular items
 
   // Display all items
-  app.get("", function(req, res) {});
+  // Replace insertdb with sequelize data
+  app.get("/all", function(req, res) {
+    db.Table.findAll().then(function(data) {
+      // Note:
+      // Pass in handlebars and whatever needs to be passed
+      res.json(data);
+    });
+  });
 
-  //Display individual items
-  //
+  // Display individual items
+  // Replace insertdb with sequelize data
+  app.get("/item", function(req, res) {});
 
   // ================================================================================
   //POST route
