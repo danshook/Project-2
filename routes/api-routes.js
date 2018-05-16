@@ -21,29 +21,44 @@ module.exports = function(app) {
 
   // Display all items
   // Replace insertdb with sequelize data
-  app.get("/all", function(req, res) {
-    db.Table.findAll().then(function(data) {
+  app.get("/api/all", function(req, res) {
+    db.Product.findAll({}).then(function(data) {
+      var hbsObject = {
+        products: data
+      };
+      // Note:
+      // Pass in handlebars and whatever needs to be passed
+      res.render("index", hbsObject);
+    });
+  });
+
+  // Display individual items
+  // Replace insertdb with sequelize data
+  app.get("/api/sell/:id", function(req, res) {
+    db.Product.findOne({
+      where: req.params.id
+    }).then(function(data) {
       // Note:
       // Pass in handlebars and whatever needs to be passed
       res.json(data);
     });
   });
 
-  // Display individual items
-  // Replace insertdb with sequelize data
-  app.get("/item", function(req, res) {});
-
   // ================================================================================
   //POST route
   // ================================================================================
 
-  app.post("", function(req, res) {});
+  app.post("/all", function(req, res) {
+    db.Seller.create(req.body).then(function(data) {
+      res.json(data);
+    });
+  });
 
   // ================================================================================
   //UPDATE route
   // ================================================================================
 
-  app.put("", function(req, res) {});
+  app.put("/item/:id", function(req, res) {});
 
   // ================================================================================
   //DELETE route
