@@ -12,23 +12,18 @@ var path = require("path");
 module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // Log in page
-  app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, ""));
-  });
+    app.get("/", (req, res) => {
+        res.render("index.handlebars", {
+        });
+    });
 
-  // Main landing page
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, ""));
-  });
+    app.get("/sell", (req, res) => {
+        res.render("sell.handlebars", {
+        });
+    });
 
-  // Item's detailed page
-  app.get("/item", function(req, res) {
-    res.sendFile(path.join(__dirname, ""));
-  });
-
-  // Page for selling items
-  app.get("/sell", function(req, res) {
-    res.sendFile(path.join(__dirname, ""));
-  });
+    app.get("/item", (req, res) => {
+        res.render("item.handlebars", {
+        });
+    });
 };
