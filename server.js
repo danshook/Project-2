@@ -8,19 +8,21 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");   
 
+// Sets up the Express App
+// =============================================================
+var app = express();
+var PORT = process.env.PORT || 8080;
+
 app.engine("handlebars", exphbs({       // Use the Handlebars engine
   defaultLayout: "main"                 // Use 'main' for static content
 }));
 
 app.set("view engine", "handlebars"); 
 
-const exphbs = require("express-handlebars");
+
 const routes = require("./controllers/alley_controller.js");
 
-// Sets up the Express App
-// =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
+
 
 // Requiring our models for syncing
 var db = require("./models/models.js");
