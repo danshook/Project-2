@@ -6,6 +6,13 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var exphbs = require("express-handlebars");   
+
+app.engine("handlebars", exphbs({       // Use the Handlebars engine
+  defaultLayout: "main"                 // Use 'main' for static content
+}));
+
+app.set("view engine", "handlebars"); 
 
 // Sets up the Express App
 // =============================================================
