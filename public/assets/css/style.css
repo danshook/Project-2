@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/assets/img/bg.png");  
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+.mainText {
+    color: white;
+    font-size: 60px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    display: block;
+    text-align: center;
+}
+
+.subText {
+    font-size: 26px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-align: center;
+}
+
+.indexText {
+    color: white;
+    font-size: 18px;
+    height: 550px;                                                    /*  REMOVE ME AFTER CALLING IN DATA FROM DB   */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-align: center;
+}
+
+button {
+    float: right;
+}
+
+h6 {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+.footText {
+    color: white;
+    text-align: center;
+
+}
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+.formLabel {
+    margin-left: 6%;
+    font-size: 30px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.formText {
+    margin-left: 6%;
+    font-size: 22px;
+    padding-bottom: 4px;
+}
+
+.pushMe {
+    font-size: 20px;
+}
+
+.itemText {
+    text-align: center;
+    padding-top: 3%;
+    color: white;
+}
+
+.itemCloseUp {
+    height: 450px;                                                        /*  REMOVE ME AFTER CALLING IN DATA FROM DB   */
+}
+
+.btn-primary {
+    margin-right: 4%;
+}
+
