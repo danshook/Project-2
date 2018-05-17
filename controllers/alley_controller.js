@@ -18,4 +18,9 @@ router.get("/item", (req, res) => {
     });
 });
 
+router.get("*", (req, res) => {
+    res.render("404.handlebars", {
+    });
+});
+
 module.exports = router;
