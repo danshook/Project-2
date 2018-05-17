@@ -20,7 +20,7 @@ app.engine("handlebars", exphbs({       // Use the Handlebars engine
 app.set("view engine", "handlebars"); 
 
 // Static directory
-app.use(express.static("public"));          // Moved above routing to avoid CSS problems with * route
+app.use(express.static("public"));          // Moved above routing to avoid CSS problems with * route - DLO
 
 const routes = require("./controllers/alley_controller.js");
 
