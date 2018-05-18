@@ -1,19 +1,18 @@
- {{!--
 <div class="row">
     <div class="col-12">
-        <h2 class="subText">Item Title</h2>
+        <h2 class="subText">{{this.Product_Name}}</h2>
     </div>
 </div>
 <div class="row">
     <div class="col-7 itemCloseUp">
-        <p class="itemText">Price goes here</p>
+        <p class="itemText">{{this.Price}}</p>
         <br>
         <br>
-        <p class="itemText">Description Goes here</p>
+        <p class="itemText">{{this.Description}}</p>
         <br>
     </div>
     <div class="col-5">
-        <p class="itemText">Item Picture Goes Here</p>
+        <p class="itemText">{{this.image}}</p>
     </div>
 </div>
 <hr>
@@ -23,14 +22,4 @@
         <br>
     </div>
 </div>
-<hr> --}}
-
-<div>
-    <li>
-        <p>Item name: {{this.Product_Name}}</p>
-        <p>Description: {{this.Description}}</p>
-        <p>Price: {{this.Price}}</p>
-        <p>Category: {{this.Category}}</p>
-        <p>Seller: {{this.Seller_Id}}</p>
-    </li>
-</div>
+<hr>
