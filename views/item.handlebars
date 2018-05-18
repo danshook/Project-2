@@ -1,21 +1,36 @@
-        <div class="row">
-            <div class="col-12">
-                <h2 class="subText">Item Title</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-7 itemCloseUp">
-                <p class="itemText">Price goes here</p><br><br>
-                <p class="itemText">Description Goes here</p><br>
-            </div>
-            <div class="col-5">
-                <p class="itemText">Item Picture Goes Here</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-12">
-                <button type="button" class="btn btn-primary">Buy Item</button><br>
-            </div>
-        </div> 
-        <hr>
+ {{!--
+<div class="row">
+    <div class="col-12">
+        <h2 class="subText">Item Title</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-7 itemCloseUp">
+        <p class="itemText">Price goes here</p>
+        <br>
+        <br>
+        <p class="itemText">Description Goes here</p>
+        <br>
+    </div>
+    <div class="col-5">
+        <p class="itemText">Item Picture Goes Here</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12">
+        <button type="button" class="btn btn-primary">Buy Item</button>
+        <br>
+    </div>
+</div>
+<hr> --}}
+
+<div>
+    <li>
+        <p>Item name: {{this.Product_Name}}</p>
+        <p>Description: {{this.Description}}</p>
+        <p>Price: {{this.Price}}</p>
+        <p>Category: {{this.Category}}</p>
+        <p>Seller: {{this.Seller_Id}}</p>
+    </li>
+</div>

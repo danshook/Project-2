@@ -1,18 +1,28 @@
-
-    <div class="row">
-        <form class="formLabel">
-            <label class="addTitle">Add an Item to Sell</label>
-            <br><br>
-            <p class="formText">Title</p>
-            <input type="text" name="title" size="28" class="input1">
-            <br><br>
-            <p class="formText">Description of Item</p>
-            <textarea rows="6" cols="30" name="description" form="usrform">
-            </textarea>
-            <p class="formText">Price</p>
-            <input type="text" name="price" size="7" class="input3">
-            <br><br>
-            <input type="submit" class="pushMe" style="background:darkgray;color: darkblue"> 
-        </form>  
-    </div>
-    <hr>
+<div class="row">
+    <form class="formLabel" action="/sell" method="POST" id="usrform">
+        <label class="addTitle">Add an Item to Sell</label>
+        <br>
+        <br>
+        <p class="formText">Title</p>
+        <input type="text" name="title" size="28" class="Product_Name">
+        <br>
+        <br>
+        <p class="formText">Description of Item</p>
+        <textarea type="text" rows="6" cols="30" name="description" form="usrform" class="Description"></textarea>
+        <p class="formText">Price</p>
+        <input type="text" name="price" size="7" class="Price">
+        <br>
+        <br>
+        <label for="exampleFormControlSelect1">Category</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Clothing</option>
+            <option>Gaming</option>
+            <option>Electronics</option>
+            <option>Human</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" class="pushMe" style="background:darkgray;color: darkblue">
+    </form>
+</div>
+<hr>
