@@ -1,32 +1,56 @@
-
 const express = require("express");
 const model = require("../models/models.js");
 const router = express.Router();
 
+//GET route for all items
 router.get("/", (req, res) => {
-    res.render("index.handlebars");
+  model.selectAll(function(data) {
+    var item = {
+      item: data
+    };
+    console.log(item);
+    res.render("index", item);
+  });
 });
-    
 // router.get("/", (req, res) => {
-//     item.selectAll(function(data) {
-//         var itemData = {                        // Var to hold DB items - DLO
-//             item: data
-//         }
-//     });
-//     res.render("index.handlebars", itemData);
+//   item.selectAll(function(data) {
+//     var itemData = {
+//       // Var to hold DB items - DLO
+//       item: data
+//     };
+//   });
+//   res.render("index.handlebars", itemData);
 // });
 
-
-router.get("/sell", (req, res) => {
-    res.render("sell.handlebars");
-});
-   
+//Get route for individual item
+//When user clicks on the item, show detailed info
 router.get("/item", (req, res) => {
-    res.render("item.handlebars");
+  //Need a selectOne orm
+  res.render("item");
 });
 
+//Get route for any other route the user goes to
+//Show Error 404
 router.get("*", (req, res) => {
-    res.render("404.handlebars");
+  res.render("404");
+});
+
+//Get route for adding new item to sell
+router.get("/sell", (req, res) => {
+  //Need a selectOne orm
+  res.render("sell");
+});
+
+//Should this be a post route??
+router.post("/sell", (req, res) => {
+  model.create(
+    ["Product_Name", "Description", "Price"],
+    [req.body.name, req.body.sleepy],
+    function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    }
+  );
 });
 
 module.exports = router;
