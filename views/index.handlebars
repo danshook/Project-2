@@ -1,35 +1,93 @@
-        <div class="row">
-            <div class="col-3 indexText">
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-            </div>
-            <div class="col-3 indexText">
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-            </div>
-            <div class="col-3 indexText">
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-            </div>
-            <div class="col-3 indexText">
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-                <p>items</p><br><br>
-            </div>
-        </div>
-        <hr>
+ {{!--
+<div class="row">
+    <div class="col-3 indexText">
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+    </div>
+    <div class="col-3 indexText">
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+    </div>
+    <div class="col-3 indexText">
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+    </div>
+    <div class="col-3 indexText">
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+        <p>items</p>
+        <br>
+        <br>
+    </div>
+</div>
+<hr> --}}
+<ul>
+    {{#each item}}
+    <div class="row">
+        <p class="{{this.Product_Id}}"></p>
+        <p>{{this.Product_Name}}</p>
+        <p>{{this.Price}}</p>
+    </div>
+    {{/each}}
+</ul>
