@@ -1,19 +1,34 @@
-<!-- main.handlebars -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Garage Sale</title>
+    <title>Meet Me In The Alley</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./public/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">   
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
 </head> 
 <body>
-    <div class="container">  
+    <div class="container-fluid">  
+        <div class="row">
+            <div class="col-12">
+                <p class="mainText">Meet Me In The Alley*</p>
+                <p class="subText">*Don't meet people in Alleys!</p>>
+                <hr>
+            </div>
+        </div>
         {{{ body }}}
+        <footer class="page-footer font-small blue pt-4 mt-4">
+            <div class="footer-copyright py-3 text-center">
+                <p class="footText">© 2018 Copyright: Brogrammers</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html> 
