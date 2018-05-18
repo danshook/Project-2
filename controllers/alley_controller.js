@@ -12,26 +12,10 @@ router.get("/", (req, res) => {
     res.render("index", item);
   });
 });
-// router.get("/", (req, res) => {
-//   item.selectAll(function(data) {
-//     var itemData = {
-//       // Var to hold DB items - DLO
-//       item: data
-//     };
-//   });
-//   res.render("index.handlebars", itemData);
-// });
 
 //Get route for individual item
 //When user clicks on the item, show detailed info
 router.get("/item", (req, res) => {
-  model.selectOne(function(data) {
-    var item = {
-      item: data
-    };
-    console.log(item);
-    res.render("index", item);
-  });
   //Need a selectOne orm
   res.render("item", item);
 });
@@ -44,8 +28,8 @@ router.get("/sell", (req, res) => {
 
 // Post Route
 router.post("/sell", function(req, res) {
-  console.log(req.body);
-  res.status(200);
+  //   console.log(req.body);
+  res.json();
 });
 
 //Get route for any other route the user goes to
@@ -53,17 +37,5 @@ router.post("/sell", function(req, res) {
 router.get("*", (req, res) => {
   res.render("404");
 });
-
-// //Should this be a post route??
-// router.post("/sell", (req, res) => {
-//   model.create(
-//     ["Product_Name", "Description", "Price"],
-//     [req.body.name, req.body.sleepy],
-//     function(result) {
-//       // Send back the ID of the new quote
-//       res.json({ id: result.insertId });
-//     }
-//   );
-// });
 
 module.exports = router;
