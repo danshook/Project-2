@@ -63,7 +63,10 @@ module.exports = function (sequelize, DataTypes) {
                 isEmail: true
             }
 
-        }
+        },
+
+        createdAT: Sequelize.DATE,
+        updatedAT: Sequelize.DATE
     });
 
     Post.associate = function (models) {
