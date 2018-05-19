@@ -21,7 +21,7 @@ module.exports = function (app) {
   });
 
   // Get route for returning Products of a specific ID, name, category or price
-  app.get("/api/Products/Products/:category", function (req, res) {
+  app.get("/api/Products/Products/:term", function (req, res) {
     db.Alley.findAll({
       where: {
         $or: [
@@ -104,7 +104,7 @@ module.exports = function (app) {
   });
 
   // Get route for returning Seller of a specific ID, Last name, City, Zip, email
-  app.get("/api/Seller/Seller/:seller", function (req, res) {
+  app.get("/api/Seller/Seller/:term", function (req, res) {
     db.Alley.findAll({
       where: {
         $or: [
@@ -191,7 +191,7 @@ module.exports = function (app) {
   });
 
   // Get route for returning Buyer of a specific ID, Last name, City, Zip, email
-  app.get("/api/Buyer/Buyer/:Buyer", function (req, res) {
+  app.get("/api/Buyer/Buyer/:term", function (req, res) {
     db.Alley.findAll({
       where: {
         $or: [
