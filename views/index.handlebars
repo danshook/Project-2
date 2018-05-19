@@ -13,7 +13,7 @@
             <div class="col-3">
                 <div class="itemsForSale">
                     {{#each items}}
-                        <a href="/item/:id" style="color:white;">
+                        <a href="/item/:{{this.Product_Name}}" style="color:white;">
                         <p>Product Name: {{this.Product_Name}}</p>
                         <p>Category: {{this.Category}}</p>
                         <p>Description: {{this.Description}}</p>
