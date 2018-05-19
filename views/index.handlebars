@@ -11,7 +11,7 @@
         <div class="row">
             {{#each items}}
                 <div class="col-2">
-                    <a href="/item/:Product_Name" style="color:white;">View This Item</a>
+                    <a href="/item/:{{this.Product_Id}}" style="color:white;">View This Item</a>
                 </div>
                 <div class="col-2" style="color:white;">
                     <p>Product Name: {{this.Product_Name}}</p>
@@ -32,4 +32,13 @@
             {{/each}}
         </div>
         <hr>
+        <div class="row">
+            <div class="searchMe" style="margin:2% auto 0 auto;">
+                <form><p style="color:white;">Search</p>
+                <input type="text" name="search">
+                <br><br>
+                <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     
