@@ -2,26 +2,33 @@
             <div class="col-1"></div>
             <div class="col-10">
                 <a href="/sell">
-                    <button type="button" class="btn btn-warning" style="margin-bottom:1%;color:red;">I Want To SELL</button>
+                    <button type="button" class="btn btn-warning" style="margin-bottom:1%;color:red;margin-top:-5%;">I Want To SELL</button>
                 </a>
             </div>
-            <div class="col-1"></div>
-        
+            <div class="col-1"></div> 
         </div>
         <hr>
         <div class="row">
-            <div class="col-3">
-                <div class="itemsForSale">
-                    {{#each items}}
-                        <a href="/item/:{{this.Product_Name}}" style="color:white;">
-                        <p>Product Name: {{this.Product_Name}}</p>
-                        <p>Category: {{this.Category}}</p>
-                        <p>Description: {{this.Description}}</p>
-                        <br><br>
-                        </a>
-                    {{/each}}
-
+            {{#each items}}
+                <div class="col-2">
+                    <a href="/item/:Product_Name" style="color:white;">View This Item</a>
                 </div>
-            </div>
+                <div class="col-2" style="color:white;">
+                    <p>Product Name: {{this.Product_Name}}</p>
+                </div>
+                <div class="col-2" style="color:white;">
+                    <p>Description: {{this.Description}}</p>
+                </div>
+                <div class="col-2" style="color:white;">
+                    <p>Category: {{this.Category}}</p>
+                </div>
+                <div class="col-2" style="color:white;">
+                    <p class="price">Price: {{this.Price}}</p>
+                </div>
+                <div class="col-2" style="color:white;">
+                    <img src="{{this.Picture}}" style="max-width:40%;">
+                </div>
+                <br><br>
+            {{/each}}
         </div>
         <hr>

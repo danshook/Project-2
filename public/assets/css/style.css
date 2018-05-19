@@ -108,3 +108,23 @@ footer {
     padding-top: 3%;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+.itemsForSale {
+    margin-left: 9%;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        
+}
+
+.price {
+    margin-bottom: 2%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.spacer {
+    margin-bottom: 50px;
+}
+
