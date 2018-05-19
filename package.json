@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": ["Project", "2", "brogrammers"],
+  "keywords": [
+    "Project",
+    "2",
+    "brogrammers"
+  ],
   "author": "Daniel Olivas",
   "license": "ISC",
   "devDependencies": {
@@ -20,6 +24,7 @@
     "express-handlebars": "^3.0.0",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
+    "node-sass": "^4.9.0",
     "nodemon": "^1.17.4",
     "path": "^0.12.7",
     "sass": "^1.3.2",
