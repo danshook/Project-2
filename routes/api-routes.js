@@ -1,68 +1,101 @@
-// ================================================================================
-//  api-routes.js - A set of routes for sending users to the various html pages
-// ================================================================================
+// *********************************************************************************
+// api-routes.js - this file offers a set of routes for displaying and saving data to the db
+// *********************************************************************************
 
 // Dependencies
-// ================================================================================
+// =============================================================
 
-// Require models
-var db = require("../models/models.js");
+// Requiring our Todo model
+var db = require("../models");
 
-// ================================================================================
-// ROUTES
-// ================================================================================
+// Routes
+// =============================================================
+module.exports = function (app) {
 
-module.exports = function(app) {
-  // ================================================================================
-  // GET route
-  // ================================================================================
-  // To do: Make a GET route for filters
-  // Ex.: If users want to only see popular items
-
-  // Display all items
-  // Replace insertdb with sequelize data
-  app.get("/api/all", function(req, res) {
-    db.Product.findAll({}).then(function(data) {
-      var hbsObject = {
-        products: data
-      };
-      // Note:
-      // Pass in handlebars and whatever needs to be passed
-      res.render("index", hbsObject);
-    });
+  // GET route for getting all of the Products
+  app.get("/api/Products/", function (req, res) {
+    db.Alley.findAll({})
+      .then(function (dbAlley) {
+        res.json(dbAlley);
+      });
   });
 
-  // Display individual items
-  // Replace insertdb with sequelize data
-  app.get("/api/sell/:id", function(req, res) {
-    db.Product.findOne({
-      where: req.params.id
-    }).then(function(data) {
-      // Note:
-      // Pass in handlebars and whatever needs to be passed
-      res.json(data);
+  // Get route for returning Products of a specific ID, name, category or price
+  app.get("/api/Products/Products/:category", function (req, res) {
+    db.Alley.findAll({
+      where: {
+        $or: [
+          Product_ID, { $eq: term },
+
+          Product_name, { $eq: term },
+
+          Category, { $eq: term },
+
+          Price, { $eq: term }
+
+
+        ]
+      }
     });
-  });
 
-  // ================================================================================
-  //POST route
-  // ================================================================================
+  }),
+    
+      $.then(function (dbAlley) {
+  res.json(dbAlley);
+}),
 
-  app.post("/all", function(req, res) {
-    db.Seller.create(req.body).then(function(data) {
-      res.json(data);
+
+// Get route for retrieving a single post
+app.get("/api/Products/:id", function (req, res) {
+  db.Post.findOne({
+    where: {
+      Product_ID: req.params.id
+    }
+  })
+    .then(function (dbAlley) {
+      res.json(dbAlley);
     });
-  });
+}),
 
-  // ================================================================================
-  //UPDATE route
-  // ================================================================================
+// POST route for saving a new post
+app.post("/api/Products", function (req, res) {
+  console.log(req.body);
+  db.Alley.create({
+    Product_Name: req.body.Product_Name,
+    Category: req.body.category,
+    Picture: req.body.picture,
+    Description: req.body.description,
+    Price: req.body.price
+  })
+    .then(function (dbAlley) {
+      res.json(dbAlley);
+    });
+}),
 
-  app.put("/item/:id", function(req, res) {});
+// DELETE route for deleting Productscts
+app.delete("/api/Products/:id", function (req, res) {
+  db.Products.destroy({
+    where: {
+      Product_ID: req.params.id
+    }
+  })
+    .then(function (dbPost) {
+      res.json(dbPost);
+    });
+}),
 
-  // ================================================================================
-  //DELETE route
-  // ================================================================================
+// PUT route for updating Products
+app.put("/api/Products", function (req, res) {
+  db.Products.update(req.body,
+    {
+      where: {
+        Product_ID: req.body.id
+      }
+    })
+    .then(function (dbAlley) {
+      res.json(dbAlley);
+    });
 
-  app.delete("", function(req, res) {});
-};
+
+    
+})};
