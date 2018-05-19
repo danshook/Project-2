@@ -1,13 +1,26 @@
         <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <a href="/sell">
+                    <button type="button" class="btn btn-warning" style="margin-bottom:1%;color:red;">I Want To SELL</button>
+                </a>
+            </div>
+            <div class="col-1"></div>
+        
+        </div>
+        <hr>
+        <div class="row">
             <div class="col-3">
                 <div class="itemsForSale">
                     {{#each items}}
+                        <a href="/item/:id" style="color:white;">
                         <p>Product Name: {{this.Product_Name}}</p>
                         <p>Category: {{this.Category}}</p>
                         <p>Description: {{this.Description}}</p>
-                        <button type="button" class="btn btn-success">Buy</button>
                         <br><br>
+                        </a>
                     {{/each}}
+
                 </div>
             </div>
         </div>
