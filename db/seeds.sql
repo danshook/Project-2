@@ -1,11 +1,11 @@
 INSERT INTO products
     (Product_Name, Category, Picture, Description, Price, Buyer_ID, Seller_ID)
 VALUES
-    ('32MB iPhone8s', 'smartphone', 'iphone8sblack.jpg', 'Black iphone, 32MB', 75.00, null, 1),
-    ('64MB iPhone8s', 'smartphone', 'iphone8sblack.jpg', 'Black iphone, 64MB', 85.00, null, 1),
-    ('Nintendo Wii', 'gaming console', 'nintendoWii.jpg', 'Nintendo Wii with two controllers', 100.00, null, 3),
-    ('Lenovo375 Laptop', 'laptop', 'lenovo375laptop.png', '16GB RAM, 1TB HD SSD, 2.1gHZ Intel processor', 548.00, null, 5),
-    ('HP Pavillion 300', 'desktop', 'hpdesktop.jpg', '32GB RAM, 2TB HD SSD, 2.5gHZ Intel processor, NIVIDIA Grapics, 18 inch HD montior. Brand new.', 1999.99, null, 4);
+    ('32MB iPhone8s', 'smartphone', '/assets/img/iphone8sblack.jpg', 'Black iphone, 32MB', 75.00, null, 1),
+    ('64MB iPhone8s', 'smartphone', '/assets/img/iphone8sblack.jpg', 'Black iphone, 64MB', 85.00, null, 1),
+    ('Nintendo Wii', 'gaming console', '/assets/img/nintendoWii.jpg', 'Nintendo Wii with two controllers', 100.00, null, 3),
+    ('Lenovo375 Laptop', 'laptop', '/assets/img/lenovo375laptop.png', '16GB RAM, 1TB HD SSD, 2.1gHZ Intel processor', 548.00, null, 5),
+    ('HP Pavillion 300', 'desktop', '/assets/img/hpdesktop.jpg', '32GB RAM, 2TB HD SSD, 2.5gHZ Intel processor, NIVIDIA Grapics, 18 inch HD montior. Brand new.', 1999.99, null, 4);
 
 
 INSERT INTO buyer
