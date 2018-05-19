@@ -1,93 +1,14 @@
- {{!--
-<div class="row">
-    <div class="col-3 indexText">
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-    </div>
-    <div class="col-3 indexText">
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-    </div>
-    <div class="col-3 indexText">
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-    </div>
-    <div class="col-3 indexText">
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-        <p>items</p>
-        <br>
-        <br>
-    </div>
-</div>
-<hr> --}}
-<ul>
-    {{#each item}}
-    <div class="{{this.Product_Id}}">
-        <img src="" alt="Picture">
-        <p>{{this.Product_Name}}</p>
-        <p>{{this.Price}}</p>
-    </div>
-    {{/each}}
-</ul>
+        <div class="row">
+            <div class="col-3">
+                <div class="itemsForSale">
+                    {{#each items}}
+                        <p>Product Name: {{this.Product_Name}}</p>
+                        <p>Category: {{this.Category}}</p>
+                        <p>Description: {{this.Description}}</p>
+                        <button type="button" class="btn btn-success">Buy</button>
+                        <br><br>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <hr>
