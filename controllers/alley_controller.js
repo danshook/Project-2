@@ -1,35 +1,40 @@
 const express = require("express");
-const model = require("../models/models.js");
+const db = require("../models/");
 const router = express.Router();
 
 //GET route for all items
 router.get("/", (req, res) => {
-  model.selectAll(function(data) {
-    var item = {
+  db.Products.findAll({}).then(function(data) {
+    var items = {
       item: data
     };
-    console.log(item);
-    res.render("index", item);
+    console.log(items);
+    res.render("index", items);
   });
 });
 
 //Get route for individual item
 //When user clicks on the item, show detailed info
-router.get("/item", (req, res) => {
-  //Need a selectOne orm
-  res.render("item", item);
+router.get("/item/:id", (req, res) => {
+  db.Products.findOne({
+    where: {
+      Product_Id: req.params.param
+    }
+  });
+  res.render("item");
 });
 
 //Get route for adding new item to sell
 router.get("/sell", (req, res) => {
-  //Need a selectOne orm
   res.render("sell");
 });
 
 // Post Route
-router.post("/sell", function(req, res) {
+router.post("/api/sell", function(req, res) {
   //   console.log(req.body);
-  res.json();
+  db.Products.create(req.body).then(function(data) {
+    res.json(data);
+  });
 });
 
 //Get route for any other route the user goes to
