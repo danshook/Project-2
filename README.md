@@ -5,7 +5,7 @@ Meet Me In The Alley
 </p>
 </h1>
 
-### Meet Me In The Alley is a full stack website built with HTML, CSS, SASS, jQuery, NodeJS, ExpressJS, HandlebarsJS, & MySQL.  Users are able to buy and sell items using our intuitive online marketplace.
+### Meet Me In The Alley is a full stack website built with JavaScript, HTML, CSS, SASS, jQuery, NodeJS, ExpressJS, HandlebarsJS, SequelizeJS & MySQL.  Users are able to buy and sell items using our intuitive online marketplace.
 
 ---
 <br>
