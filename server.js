@@ -8,10 +8,16 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");   
 
+
+
+
+
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+
+
 
 app.engine("handlebars", exphbs({       // Use the Handlebars engine
   defaultLayout: "main"                 // Use 'main' for static content
@@ -21,6 +27,9 @@ app.set("view engine", "handlebars");
 
 // Static directory
 app.use(express.static("public"));          // Moved above routing to avoid CSS problems with * route - DLO
+
+const compileSass = require('compile-sass');
+app.use('/assets/css/style.sass', compileSass());
 
 const routes = require("./controllers/alley_controller.js");
 
