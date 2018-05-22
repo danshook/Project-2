@@ -1,23 +1,26 @@
-        <div class="row">
+
+                <div class="row">
             <div class="col-12">
-                <h2 class="subText">Item Title</h2>
+                
+                {{#each items}}
+                <p style="color:white;font-size:50px;text-align:center;">{{this.Product_Name}}</p>
+                <br><br>
             </div>
         </div>
         <div class="row">
-            <div class="col-7 itemCloseUp">
-                {{item}}
-                <p class="itemTitle">{{this.Product_Name}}</p><br><br>
-                <p class="itemDescription">{{this.Description}}</p><br>
-                <p class="itemPrice">{{this.Price}}</p>
+            <div class="col-6 itemCloseUp">
+                <p style="color:white;font-size:28px;margin-left:6%;">Description: {{this.Description}}</p><br><br>
+                <p style="color:white;font-size:24px;margin-left:6%;">Price: ${{this.Price}}</p><br>
+                <p style="color:white;font-size:24px;margin-left:6%;">Category: {{this.Category}}</p>
             </div>
+            <div class="col-1"></div>
             <div class="col-5">
-                <p class="itemPicture">{{this.Picture}}</p>
+                <p class="itemPicture"><img  style="width:60%;margin-left:19%;margin-bottom:3%;" src="{{this.Picture}}"</p>
             </div>
+                {{/each}}
         </div>
-        <hr>
         <div class="row">
             <div class="col-12">
-                <button type="button" class="btn btn-primary">Buy Item</button><br>
+                <button type="button" class="btn btn-primary" style="margin-right:9%;">Buy Item</button><br>
             </div>
         </div> 
-        <hr>

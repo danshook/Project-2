@@ -1,45 +1,33 @@
-<div class="row">
-    <div class="col-1"></div>
-    <div class="col-10">
-        <a href="/sell">
-            <button type="button" class="btn btn-warning" style="margin-bottom:1%;margin-top:-5%;">I Want To SELL</button>
-        </a>
-    </div>
-    <div class="col-1"></div>
-</div>
-<hr>
-<div class="row">
-    {{#each item}}
-    <div class="col-2">
-        <a href="/item/:{{this.Product_Id}}" style="color:white;">View This Item</a>
-    </div>
-    <div class="col-2" style="color:white;">
-        <p>Product Name: {{this.Product_Name}}</p>
-    </div>
-    <div class="col-2" style="color:white;">
-        <p>Description: {{this.Description}}</p>
-    </div>
-    <div class="col-2" style="color:white;">
-        <p>Category: {{this.Category}}</p>
-    </div>
-    <div class="col-2" style="color:white;">
-        <p class="price">Price: {{this.Price}}</p>
-    </div>
-    <div class="col-2" style="color:white;">
-        <img src="{{this.Picture}}" style="max-width:40%;">
-    </div>
-    <br>
-    <br> {{/each}}
-</div>
-<hr>
-<div class="row">
-    <div class="searchMe" style="margin:2% auto 0 auto;">
-        <form>
-            <p style="color:white;">Search</p>
-            <input type="text" name="search">
-            <br>
-            <br>
-            <input type="submit" value="Submit" id="submit">
-        </form>
-    </div>
-</div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 indexTitle">
+                <p>Items For Sale</p>
+            </div>
+            <div class="col-3"></div>
+            {{#each items}}
+                <div class="col-1"></div>
+                <div class="col-3 indexText">
+                    <a href="/item/:{{this.Product_Id}}" style="color:white;">
+                    <p>Product Name: {{this.Product_Name}}</p></a>
+                </div>
+                <div class="col-3 indexText" style="color:white;">
+                    <a href="/item/:{{this.Product_Id}}" style="color:white;">
+                    <p>Description: {{this.Description}}</p></a>
+                </div>
+                <div class="col-1 indexText" style="color:white;">
+                    <a href="/item/:{{this.Product_Id}}" style="color:white;">
+                    <p>Category: {{this.Category}}</p></a>
+                </div>
+                <div class="col-1 indexText" style="color:white;">
+                    <a href="/item/:{{this.Product_Id}}" style="color:white;">
+                    <p class="price">Price: ${{this.Price}}</p></a>
+                </div>
+                <div class="col-2">
+                    <a href="/item/:{{this.Product_Id}}" style="color:white;">
+                    <img src="{{this.Picture}}" class="indexImage" style="max-width:40%;"></a>
+                </div>
+                <div class="col-1"></div>
+                <br><br>
+            {{/each}}
+        </div>
+        <br><br>
