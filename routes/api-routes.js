@@ -39,9 +39,9 @@ module.exports = function (app) {
     });
 
   })
-    .then(function (dbAlley) {
-      res.json(dbAlley);
-    });
+    // .then(function (dbAlley) {
+    //   res.json(dbAlley);
+    // });
 
 
   // Get route for retrieving a single post
@@ -123,9 +123,9 @@ module.exports = function (app) {
 
   })
 
-    .then(function (dbAlley) {
-      res.json(dbAlley);
-    });
+    // .then(function (dbAlley) {
+    //   res.json(dbAlley);
+    // });
 
 
   // Get route for retrieving a single seller
@@ -212,9 +212,9 @@ module.exports = function (app) {
 
   })
 
-    .then(function (dbAlley) {
-      res.json(dbAlley);
-    });
+    // .then(function (dbAlley) {
+    //   res.json(dbAlley);
+    // });
 
 
   // Get route for retrieving a single Buyer

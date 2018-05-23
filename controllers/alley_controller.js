@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
     var item = {
       item: data
     };
-    console.log(item);
+    console.log("item alleyController: ", item);
     res.render("index", item);
   });
 });
